@@ -1,0 +1,7 @@
+# Add the following to the exporters section of a collector configuration
+
+      otlp/otel-semconv-checker:
+        endpoint: otel-semconv-checker.default.svc.cluster.local:4317
+        tls:
+          insecure: true
+        compression: none
