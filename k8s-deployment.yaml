@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otel-semconv-checker
+spec:
+  selector:
+    matchLabels:
+      app: otel-semconv-checker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: otel-semconv-checker
+    spec:
+      containers:
+      - name: checker
+        image: otel-semconv-checker:9
+        ports:
+        - containerPort: 4317

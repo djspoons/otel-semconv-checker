@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: otel-semconv-checker
+  labels:
+    app: otel-semconv-checker
+spec:
+  ports:
+  - port: 4317
+    protocol: TCP
+  selector:
+    app: otel-semconv-checker
